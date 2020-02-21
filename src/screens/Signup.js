@@ -21,7 +21,7 @@ export default class App extends React.Component{
         </View>
         <View style={styles.input}>
         <TouchableOpacity onPress={this.signupPressed}>
-            <Text style={styles.signup}>Sign Up</Text>
+            <Text style={styles.button}>Sign Up</Text>
         </TouchableOpacity>
         </View>
       </View>
@@ -43,17 +43,21 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 10
         },
-    signup: {
-        backgroundColor: colors.green01,
-        color: 'white',
-        width: "75%",
-        borderRadius: 25,
-        textAlign: 'center',
-        fontWeight: 'bold',
-        //marginLeft: '18%',
-        padding: "2%",
-        fontSize:  27,
-        marginTop: '50%',
-        alignSelf: 'center',
-      },
+    button: {
+            backgroundColor: colors.green01,
+            color: 'white',
+            width: "75%",
+            borderRadius: 25,
+            textAlign: 'center',
+            fontWeight: 'bold',
+            padding: "2%",
+            fontSize:  27,
+            marginTop: '10%',
+            alignSelf: 'center',
+            shadowColor: 'rgba(0,0,0, .4)', // IOS
+            shadowOffset: { height: 2, width: 2 }, // IOS
+            shadowOpacity: 1, // IOS
+            shadowRadius: 1, //IOS
+            elevation: 2, // Android
+    },
 })

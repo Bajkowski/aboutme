@@ -15,7 +15,7 @@ export default class App extends React.Component {
                 <TextInput placeholder="Enter Username" style={styles.input}/>
                 <TextInput placeholder="Enter Password" style={styles.input}/>
                 <TouchableOpacity onPress={this.loginPressed}>
-                    <Text style={styles.login}>Login</Text>
+                    <Text style={styles.button}>Login</Text>
                 </TouchableOpacity>
             </View>
             </View>
@@ -36,17 +36,21 @@ const styles = StyleSheet.create({
         marginTop: '25%',
         margin: 5
     },
-    login: {
+    button: {
         backgroundColor: colors.green01,
         color: 'white',
         width: "75%",
         borderRadius: 25,
         textAlign: 'center',
         fontWeight: 'bold',
-        //marginLeft: '18%',
         padding: "2%",
         fontSize:  27,
-        marginTop: '50%',
+        marginTop: '10%',
         alignSelf: 'center',
+        shadowColor: 'rgba(0,0,0, .4)', // IOS
+        shadowOffset: { height: 2, width: 2 }, // IOS
+        shadowOpacity: 1, // IOS
+        shadowRadius: 1, //IOS
+        elevation: 2, // Android
       },
 })
