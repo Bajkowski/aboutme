@@ -15,7 +15,7 @@ export default class App extends React.Component {
 
         Firebase.auth()
             .signInWithEmailAndPassword(email, password)
-            .then(() => this.props.navigation.navigate('aboutme'))
+            .then(() => this.props.navigation.navigate('signedin'))
             .catch(error => console.log(error))
     }
 
@@ -54,7 +54,8 @@ const styles = StyleSheet.create({
         display: "flex",
         backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center',
+        //justifyContent: 'center',
+        marginTop: 200,
     },
     input: {
         width: '85%',

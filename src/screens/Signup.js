@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
         display: "flex",
         backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center',
+        //justifyContent: 'center',
+        marginTop: 150,
     },
     input: {
         width: '85%',

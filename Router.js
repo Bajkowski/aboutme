@@ -6,6 +6,9 @@ import Signup from './src/screens/Signup.js'
 import Secured from './src/screens/Secured.js'
 import Aboutme from './src/screens/Aboutme.js'
 import colors from "./src/styles/color";
+import Funstuff from './src/screens/Funstuff.js'
+import Futuregoals from './src/screens/Futuregoals.js'
+import Myclasses from './src/screens/Myclasses.js'
 
 
 const Routes = ()=> {
@@ -61,6 +64,39 @@ const Routes = ()=> {
                     key="aboutme"
                     title="About Me"
                     component={Aboutme}
+                    backButtonTextStyle = {{color:'#000000'}}
+                    barButtonIconStyle={{ tintColor: '#000000' }}
+                    titleStyle = {{color : '#000000'}}
+                    backButtonTintColor = '#000'
+                    leftButtonStyle = {{color : '#000',tintColor : '#000'}}
+                    navigationBarStyle={{ backgroundColor: colors.green01,borderBottomColor:"#1e2226"}}>
+                </Scene>
+                <Scene
+                    key="funstuff"
+                    title="Fun Stuff"
+                    component={Funstuff}
+                    backButtonTextStyle = {{color:'#000000'}}
+                    barButtonIconStyle={{ tintColor: '#000000' }}
+                    titleStyle = {{color : '#000000'}}
+                    backButtonTintColor = '#000'
+                    leftButtonStyle = {{color : '#000',tintColor : '#000'}}
+                    navigationBarStyle={{ backgroundColor: colors.green01,borderBottomColor:"#1e2226"}}>
+                </Scene>
+                <Scene
+                    key="futuregoals"
+                    title="Future Goals"
+                    component={Futuregoals}
+                    backButtonTextStyle = {{color:'#000000'}}
+                    barButtonIconStyle={{ tintColor: '#000000' }}
+                    titleStyle = {{color : '#000000'}}
+                    backButtonTintColor = '#000'
+                    leftButtonStyle = {{color : '#000',tintColor : '#000'}}
+                    navigationBarStyle={{ backgroundColor: colors.green01,borderBottomColor:"#1e2226"}}>
+                </Scene>
+                <Scene
+                    key="myclasses"
+                    title="My Classes"
+                    component={Myclasses}
                     backButtonTextStyle = {{color:'#000000'}}
                     barButtonIconStyle={{ tintColor: '#000000' }}
                     titleStyle = {{color : '#000000'}}
