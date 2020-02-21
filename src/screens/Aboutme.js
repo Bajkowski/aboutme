@@ -5,7 +5,7 @@ import colors from "../styles/color";
 
 export default class App extends React.Component{
     
-    signupPressed = ()=>{
+    homePressed = ()=>{
         Actions.signedin()
       }
 
@@ -14,8 +14,8 @@ export default class App extends React.Component{
     <View style={styles.wrapper}> 
       <View style={styles.container}>
       <Text style={styles.signup}>About Me</Text>
-        <TouchableOpacity onPress={this.signupPressed}>
-            <Text style={styles.signup}>Sign Up</Text>
+        <TouchableOpacity onPress={this.homePressed}>
+            <Text style={styles.signup}>Home</Text>
         </TouchableOpacity>
         </View>
       </View>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         display: "flex",
-        backgroundColor: colors.green01 
+        backgroundColor: 'white' 
     },
     container: {
         padding: 20
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
         marginBottom: 10
         },
     signup: {
-        backgroundColor: 'white',
-        color: '#3A59FF',
+        backgroundColor: colors.green01,
+        color: 'white',
         width: "75%",
         borderRadius: 25,
         textAlign: 'center',

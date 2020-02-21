@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         display: "flex",
-        backgroundColor: colors.green01 
+        backgroundColor: 'white' 
     },
     container: {
         padding: 10,
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
         margin: 5
     },
     login: {
-        backgroundColor: 'white',
-        color: '#3A59FF',
+        backgroundColor: colors.green01,
+        color: 'white',
         width: "75%",
         borderRadius: 25,
         textAlign: 'center',

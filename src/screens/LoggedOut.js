@@ -24,10 +24,7 @@ export default class LoggedOut extends Component {
       <View style={styles.wrapper}> 
         <View style={styles.welcomeWrapper}>
           <Text style={styles.welcomeText}>
-            Welcome to About Me!
-          </Text>
-          <Text style={styles.welcomesubText}>
-            Please log in, sign up, or continue in anonymous mode:
+            All About Me
           </Text>
           <TouchableOpacity onPress={this.signupPressed}>
             <Text style={styles.signup}>Sign Up</Text>
@@ -36,7 +33,7 @@ export default class LoggedOut extends Component {
             <Text style={styles.login}>Log In</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={this.anonPressed}>
-            <Text style={styles.anon}>Skip For Now...</Text>
+            <Text style={styles.anon}>Skip</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -48,7 +45,7 @@ const styles = StyleSheet.create({
     wrapper: {
       flex: 1,
       display: "flex",
-      backgroundColor: colors.green01 
+      backgroundColor: 'white' 
     },
     welcomeWrapper: {
       flex: 1,
@@ -57,9 +54,10 @@ const styles = StyleSheet.create({
       padding: 20
     },
     welcomeText: {
-      fontSize: 30,
-      color: colors.white,
+      fontSize: 40,
+      color: colors.green,
       fontWeight: "300",
+      fontWeight: 'bold',
       marginBottom: 40,
       textAlign: 'center',
       marginTop: '25%',
@@ -72,8 +70,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
       },
       signup: {
-        backgroundColor: 'white',
-        color: '#3A59FF',
+        backgroundColor: colors.green01,
+        color: 'white',
         width: "75%",
         borderRadius: 25,
         textAlign: 'center',
@@ -81,11 +79,11 @@ const styles = StyleSheet.create({
         //marginLeft: '18%',
         padding: "2%",
         fontSize:  27,
-        marginTop: '50%',
+        marginTop: '30%',
         alignSelf: 'center',
       },
       login: {
-        backgroundColor: '#3A59FF',
+        backgroundColor: colors.green01,
         color: 'white',
         width: "75%",
         borderRadius: 25,
@@ -98,15 +96,15 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
       },
       anon: {
-        backgroundColor: '#3A59FF',
+        backgroundColor: 'black',
         color: 'white',
-        width: "75%",
+        width: "50%",
         borderRadius: 25,
         textAlign: 'center',
         fontWeight: 'bold',
         //marginLeft: '11%',
-        padding: "2%",
-        fontSize:  27,
+        padding: "1%",
+        fontSize:  20,
         marginTop: '10%',
         alignSelf: 'center',
       }
