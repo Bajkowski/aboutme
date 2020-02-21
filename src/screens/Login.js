@@ -26,7 +26,6 @@ export default class App extends React.Component {
   render() {
     return (
         <View style={styles.wrapper}> 
-        <View style={styles.container}>
                 <TextInput
                     style={styles.input}
                     value={this.state.email}
@@ -45,7 +44,6 @@ export default class App extends React.Component {
                     <Text style={styles.button}>Login</Text>
                 </TouchableOpacity>
             </View>
-            </View>
     );
   }
 }
@@ -54,24 +52,23 @@ const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         display: "flex",
-        backgroundColor: 'white' 
-    },
-    container: {
-        padding: 10,
+        backgroundColor: 'white',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     input: {
         width: '85%',
         margin: 10,
         padding: 15,
-        fontSize: 16,
+        fontSize: 20,
         borderColor: '#d3d3d3',
         borderBottomWidth: 1,
         textAlign: 'center'
-    },
+        },
     button: {
         backgroundColor: colors.green01,
         color: 'white',
-        width: "75%",
+        width: 200,
         borderRadius: 25,
         textAlign: 'center',
         fontWeight: 'bold',

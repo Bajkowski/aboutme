@@ -76,9 +76,12 @@ const styles = StyleSheet.create({
       },
       button: {
         backgroundColor: colors.green01,
+        borderColor: colors.green01,
         color: 'white',
         width: "75%",
-        borderRadius: 25,
+        borderWidth: 1,
+        borderRadius: 5,
+        width: 250,
         textAlign: 'center',
         fontWeight: 'bold',
         padding: "2%",
