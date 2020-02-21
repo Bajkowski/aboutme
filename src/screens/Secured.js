@@ -2,8 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity} from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import colors from "../styles/color";
+import { connect } from 'react-redux'
+import Firebase from '../config'
 
-export default class App extends React.Component {
+class Secured extends React.Component {
 
     aboutmePressed = ()=>{
         Actions.aboutme()
@@ -17,6 +19,10 @@ export default class App extends React.Component {
     myclassesPressed = ()=>{
         Actions.myclasses()
       }
+    handleSignout = () => {
+        Firebase.auth().signOut()
+        this.props.navigation.navigate('login')
+    }
 
   render() {
     return (
@@ -34,6 +40,9 @@ export default class App extends React.Component {
         <TouchableOpacity onPress={this.myclassesPressed}>
             <Text style={styles.aboutme}>My Classes</Text>
         </TouchableOpacity>
+        <View style={styles.logout}>
+                <Button title='Logout' onPress={this.handleSignout} />
+            </View>
         </View>
         </View>
     );
@@ -67,4 +76,17 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
 
       },
+    logout: {
+        marginTop: 400,
+    }
 })
+
+// styles are as before
+
+const mapStateToProps = state => {
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps)(Secured)

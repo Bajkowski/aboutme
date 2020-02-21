@@ -9,6 +9,13 @@ import {
     APP_ID
 } from 'react-native-dotenv'
 
+// ... after other imports
+import 'firebase/firestore'
+
+
+// avoid deprecated warnings
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyCtNSpyMH2NBqeVFK6mu8XneBjf4Cyrpjk",
     authDomain: "aboutme-77a11.firebaseapp.com",
@@ -21,6 +28,8 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-const Firebase = firebase.initializeApp(firebaseConfig)
+let Firebase = firebase.initializeApp(firebaseConfig)
+
+export const db = firebase.firestore()
 
 export default Firebase
