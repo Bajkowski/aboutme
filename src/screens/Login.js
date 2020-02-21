@@ -8,12 +8,29 @@ export default class App extends React.Component {
     loginPressed = ()=>{
         Actions.signedin()
       }
+
+    state = {
+        email: '',
+        password: ''
+    }
   render() {
     return (
         <View style={styles.wrapper}> 
         <View style={styles.container}>
-                <TextInput placeholder="Enter Username" style={styles.input}/>
-                <TextInput placeholder="Enter Password" style={styles.input}/>
+                <TextInput
+                    style={styles.input}
+                    value={this.state.email}
+                    onChangeText={email => this.setState({ email })}
+                    placeholder='Email'
+                    autoCapitalize='none'
+                />
+                <TextInput
+                    style={styles.input}
+                    value={this.state.password}
+                    onChangeText={password => this.setState({ password })}
+                    placeholder='Password'
+                    secureTextEntry={true}
+                />
                 <TouchableOpacity onPress={this.loginPressed}>
                     <Text style={styles.button}>Login</Text>
                 </TouchableOpacity>
@@ -33,8 +50,13 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     input: {
-        marginTop: '25%',
-        margin: 5
+        width: '85%',
+        margin: 10,
+        padding: 15,
+        fontSize: 16,
+        borderColor: '#d3d3d3',
+        borderBottomWidth: 1,
+        textAlign: 'center'
     },
     button: {
         backgroundColor: colors.green01,

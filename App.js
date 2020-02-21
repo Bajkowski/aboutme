@@ -5,6 +5,7 @@ import { Platform, StyleSheet, Text, View, ImageBackground, StatusBar } from "re
 import LoggedOut from "./src/screens/LoggedOut";
 import Login from "./src/screens/Login";
 import Routes from './Router'
+import firebase from 'firebase';
 
 export default class App extends Component {
   render() {
