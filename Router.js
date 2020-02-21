@@ -3,6 +3,8 @@ import { Router, Scene } from 'react-native-router-flux'
 import LoggedOut from './src/screens/LoggedOut.js'
 import Login from './src/screens/Login.js'
 import Signup from './src/screens/Signup.js'
+import Secured from './src/screens/Secured.js'
+import Aboutme from './src/screens/Aboutme.js'
 
 
 const Routes = ()=> {
@@ -24,6 +26,16 @@ const Routes = ()=> {
                     key="signup"
                     title="Sign Up Page"
                     component={Signup}>
+                </Scene>
+                <Scene
+                    key="signedin"
+                    title="Welcome"
+                    component={Secured}>
+                </Scene>
+                <Scene
+                    key="aboutme"
+                    title="About Me"
+                    component={Aboutme}>
                 </Scene>
            </Scene>
         </Router>

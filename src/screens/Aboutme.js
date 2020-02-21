@@ -1,24 +1,25 @@
-import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity} from 'react-native';
+import * as React from 'react';
+import { Text, View, StyleSheet, TextInput, Button, TouchableOpacity } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import colors from "../styles/color";
 
-export default class App extends React.Component {
-
-    aboutmePressed = ()=>{
-        Actions.aboutme()
+export default class App extends React.Component{
+    
+    signupPressed = ()=>{
+        Actions.signedin()
       }
 
-  render() {
+  render(){
     return (
-        <View style={styles.wrapper}> 
-        <View style={styles.container}>
-        <TouchableOpacity onPress={this.aboutmePressed}>
-            <Text style={styles.aboutme}>About Me</Text>
+    <View style={styles.wrapper}> 
+      <View style={styles.container}>
+      <Text style={styles.signup}>About Me</Text>
+        <TouchableOpacity onPress={this.signupPressed}>
+            <Text style={styles.signup}>Sign Up</Text>
         </TouchableOpacity>
         </View>
-        </View>
-    );
+      </View>
+    )
   }
 }
 
@@ -29,13 +30,13 @@ const styles = StyleSheet.create({
         backgroundColor: colors.green01 
     },
     container: {
-        padding: 10,
+        padding: 20
     },
     input: {
-        marginTop: '25%',
-        margin: 5
-    },
-    aboutme: {
+        marginTop: 10,
+        marginBottom: 10
+        },
+    signup: {
         backgroundColor: 'white',
         color: '#3A59FF',
         width: "75%",
@@ -48,4 +49,4 @@ const styles = StyleSheet.create({
         marginTop: '50%',
         alignSelf: 'center',
       },
-})
+    })

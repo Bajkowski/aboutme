@@ -1,24 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import colors from "../styles/color";
 
 export default class App extends React.Component {
+
+    loginPressed = ()=>{
+        Actions.signedin()
+      }
   render() {
     return (
         <View style={styles.wrapper}> 
         <View style={styles.container}>
                 <TextInput placeholder="Enter Username" style={styles.input}/>
                 <TextInput placeholder="Enter Password" style={styles.input}/>
-                <Button title="Hello"></Button>
-                <Button onPress={()=>this.navigate()} title="Loginn"></Button>
+                <TouchableOpacity onPress={this.loginPressed}>
+                    <Text style={styles.login}>Login</Text>
+                </TouchableOpacity>
             </View>
             </View>
     );
   }
-  navigate(){
-    Actions.home()
-}
 }
 
 const styles = StyleSheet.create({
@@ -33,5 +35,18 @@ const styles = StyleSheet.create({
     input: {
         marginTop: '25%',
         margin: 5
-    }
+    },
+    login: {
+        backgroundColor: 'white',
+        color: '#3A59FF',
+        width: "75%",
+        borderRadius: 25,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        //marginLeft: '18%',
+        padding: "2%",
+        fontSize:  27,
+        marginTop: '50%',
+        alignSelf: 'center',
+      },
 })
