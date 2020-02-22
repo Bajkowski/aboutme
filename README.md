@@ -12,7 +12,7 @@ Instructions:
 
 1. Download code
 
-2. Open Terinmal and cd into the project folder
+2. Open Terminal and cd into the project folder
 
 3. For ios: npx react-native run-ios
 
