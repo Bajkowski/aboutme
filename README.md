@@ -6,6 +6,8 @@ TA: Parul Gupta
 
 Demo: Friday at 12:40
 
+Developement log is the pdf titled "spike exercise.pdf" and is also on Canvas.
+
 Instructions:
 
 1. Download code
