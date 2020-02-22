@@ -21,24 +21,25 @@ class Secured extends React.Component {
       }
     handleSignout = () => {
         Firebase.auth().signOut()
-        this.props.navigation.navigate('login')
+        this.props.navigation.navigate('welcome')
     }
 
   render() {
     return (
         <View style={styles.wrapper}> 
         <View style={styles.container}>
+        <Text style={styles.input}>Click Around to Explore</Text>
         <TouchableOpacity onPress={this.aboutmePressed}>
-            <Text style={styles.aboutme}>About Me</Text>
+            <Text style={styles.button}>About Me</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={this.funstuffPressed}>
-            <Text style={styles.aboutme}>Fun Stuff</Text>
+            <Text style={styles.button}>Fun Stuff</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={this.futuregoalsPressed}>
-            <Text style={styles.aboutme}>Future Goals</Text>
+            <Text style={styles.button}>Future Goals</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={this.myclassesPressed}>
-            <Text style={styles.aboutme}>My Classes</Text>
+            <Text style={styles.button}>My Classes</Text>
         </TouchableOpacity>
         <View style={styles.logout}>
                 <Button title='Logout' onPress={this.handleSignout} />
@@ -59,9 +60,12 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     input: {
-        marginTop: '25%',
-        margin: 5
-    },
+        marginTop: 20,
+        marginBottom: 40,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize:  27,
+        },
     aboutme: {
         backgroundColor: colors.green01,
         color: 'white',
@@ -72,12 +76,31 @@ const styles = StyleSheet.create({
         //marginLeft: '18%',
         padding: "2%",
         fontSize:  27,
-        marginTop: 30,
+        marginTop: 35,
         alignSelf: 'center',
-
+      },
+      button: {
+        backgroundColor: colors.green01,
+        borderColor: colors.green01,
+        color: 'white',
+        width: "75%",
+        borderWidth: 1,
+        borderRadius: 5,
+        width: 250,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        padding: "2%",
+        fontSize:  27,
+        marginTop: 40,
+        alignSelf: 'center',
+        shadowColor: 'rgba(0,0,0, .4)', // IOS
+        shadowOffset: { height: 2, width: 2 }, // IOS
+        shadowOpacity: 1, // IOS
+        shadowRadius: 1, //IOS
+        elevation: 2, // Android
       },
     logout: {
-        marginTop: 400,
+        marginTop: 250,
     }
 })
 

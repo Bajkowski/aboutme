@@ -17,7 +17,7 @@ export default class LoggedOut extends Component {
 
   anonPressed = ()=> {
     Alert.alert("Entering Anonymous Mode!")
-    Actions.signedin()
+    Actions.unsecured()
   }
 
   render() {

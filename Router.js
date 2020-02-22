@@ -9,6 +9,7 @@ import colors from "./src/styles/color";
 import Funstuff from './src/screens/Funstuff.js'
 import Futuregoals from './src/screens/Futuregoals.js'
 import Myclasses from './src/screens/Myclasses.js'
+import Unsecured from './src/screens/Unsecured.js'
 
 
 const Routes = ()=> {
@@ -96,6 +97,17 @@ const Routes = ()=> {
                 <Scene
                     key="myclasses"
                     title="My Classes"
+                    component={Myclasses}
+                    backButtonTextStyle = {{color:'#000000'}}
+                    barButtonIconStyle={{ tintColor: '#000000' }}
+                    titleStyle = {{color : '#000000'}}
+                    backButtonTintColor = '#000'
+                    leftButtonStyle = {{color : '#000',tintColor : '#000'}}
+                    navigationBarStyle={{ backgroundColor: colors.green01,borderBottomColor:"#1e2226"}}>
+                </Scene>
+                <Scene
+                    key="unsecured"
+                    title="Home Page"
                     component={Myclasses}
                     backButtonTextStyle = {{color:'#000000'}}
                     barButtonIconStyle={{ tintColor: '#000000' }}

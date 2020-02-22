@@ -32,7 +32,7 @@ class Signup extends React.Component{
                     style={styles.input}
                     value={this.props.user.password}
                     onChangeText={password => this.props.updatePassword(password)}
-                    placeholder='Password'
+                    placeholder='Password: min 6 characters'
                     secureTextEntry={true}
                 />
         <TouchableOpacity onPress={this.handleSignUp}>
