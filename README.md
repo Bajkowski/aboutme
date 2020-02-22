@@ -10,11 +10,13 @@ Instructions:
 
 1. Download code
 
-2. Open Termal and cd into the project folder
+2. Open Terinmal and cd into the project folder
 
 3. For ios: npx react-native run-ios
 
 Sample Login:
 Email: test@test.com
 Password: testpls
+
+Or create any login, or skip through.
 
