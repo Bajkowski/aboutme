@@ -14,8 +14,6 @@ Instructions:
 
 3. For ios: npx react-native run-ios
 
-4. For Android: npx react-native run-android
-
 Sample Login:
 Email: test@test.com
 Password: testpls
